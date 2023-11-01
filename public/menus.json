@@ -1,0 +1,123 @@
+[
+  {
+    "path": "/home",
+    "meta":{
+      "title":"首页" 
+    }
+  },
+  {
+    "path": "/loan-input",
+    "component": "Layout",
+    "redirect": "/loan-input/index",
+    "meta": {
+      "roles": [
+        "input"
+      ],
+      "title": "贷款管理"
+    },
+    "children": [
+      {
+        "path": "/loan-input/index",       
+        "component": "loan-input/index",
+        "name": "loan-input",
+        "meta": {
+          "title": "贷款申请"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/application-manage",
+    "redirect": "/application-manage/index",
+    "component": "Layout",
+    "meta": {
+      "roles": [
+        "input"
+      ],
+      "title": "申请管理"
+    },
+    "children": [
+      {
+        "path": "/application-manage/index",
+        "component": "application-manage/index",
+        "name": "/application-manage",
+        "meta": {
+          "title": "申请列表"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/loan-approve",
+    "component": "Layout",
+    "redirect": "/loan-approve/first",
+    "meta": {
+      "title": "贷款审批",
+      "roles": [
+        "approve"
+      ]
+    },
+    "children": [
+      {
+        "path": "/loan-approve/first",
+        "component": "loan-approve/first",
+        "name": "first",
+        "meta": {
+          "title": "初审"
+        }
+      },
+      {
+        "path": "/loan-approve/end",
+        "component": "loan-approve/end",
+        "name": "end",
+        "meta": {
+          "title": "终审"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/contract-manage",
+    "component": "Layout",
+    "redirect": "/contract-manage/IndexView",
+    "meta": {
+      "title": "合同管理"
+    },
+    "children": [
+      {
+        "path": "/contract-manage/IndexView",
+        "component": "contract-manage/IndexView",
+        "name": "contract-manage",
+        "meta": {
+          "title": "合同列表"
+        }
+      }
+    ]
+  },
+  {
+    "path": "/promission",
+    "redirect": "/promission/create",
+    "component": "Layout",
+    "meta": {
+      "title": "权限管理"
+    },
+    "children": [
+      {
+        "path": "/promission/create",
+        "name": "create",
+        "component": "promission/create",
+        "meta": {
+          "title": "创建管理员"
+        }
+      },
+      {
+        "path": "/promission/list",
+        "name": "list",
+        "component": "promission/list",
+        "meta": {
+          "title": "列表展示"
+        }
+      }
+    ]
+  }
+]
